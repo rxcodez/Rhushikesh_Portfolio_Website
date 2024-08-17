@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhushikesh Hiwale | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" 
+     referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home">
+        <p>Hi, I'm</p>
+        <h1><span>Rushi</span>kesh</h1>
+    </div>
+
+    <div id="about">
+        <h1>About Me</h1>
+        <p id="myinfo">
+         I am Rhushikesh Hiwale, a passionate web-developer with a background in Engineering. My journey into the world of 
+         technology began with a fascination for how things work, which led me to explore the world of programming and software development. 
+         Over a year, I have honed my skills in Java, Spring Boot, and MySQL database and frontend technologies such as Javascript. I am committed to 
+         expanding my knowledge, improving my technical skills, and staying at the forefront of the latest industry trends. Whether it's developing robust 
+         applications or exploring new technologies, my passion for technology drives me to excel in everything I do.
+        </p>
+        <h2>Education</h2>
+        <p id="btech">Bajaj Institute of Technology Wardha<br>Bachelore of Electrical Engineering | 72.64% | 2023</p>
+        <p id="hsc">New English High School and Jr. College Wardha<br>12th IT | 60.00% | 2019</p>
+    </div>
+
+    <div class="skills-project-container">
+        <div id="skills">
+            <h1>Skills</h1>
+            <div class="skill-content-1">
+                <img src="/data/htmlpng.png" alt="hmtl" loading="lazy">
+                <img src="/data/csspng.png" alt="css" loading="lazy">
+                <img src="/data/javascriptpng.png" alt="javascript" loading="lazy">
+                <img src="/data/Javapng.png" alt="java" loading="lazy">
+            </div>
+            <div class="skill-content-2">
+                <img src="/data/springpng.png" alt="spring frameword" loading="lazy">
+                <img src="/data/hibernatepng.png" alt="hibernate" loading="lazy">
+                <img src="/data/mysqlpng.png" alt="mysql" loading="lazy">
+            </div>
+        </div>
+        <div id="projects">
+            <h1>projects</h1>
+            <p><span>RESTful CRUD API: Employee Management System with Spring boot and MySQL :</span><br>
+                Developed a RESTful API Project using Java with Spring Boot framework, MySQL
+                database, and Postman for API testing. Implemented CRUD operations for managing employee
+                data, including all features for insertion, updating, deletion, and retrieval of both individual and
+                all employee records. Utilized relational database concepts such as foreign key constraints for
+                maintaining data integrity. <br><br>
+                <a target="_blank" href="https://github.com/rxcodez/Backend-CRUD-API"><i class="fa-brands fa-github"></i></a>
+            </p>
+        </div>
+    </div>
+
+    <div id="contact">
+        <h1 id="contact-heading">Contact Me</h1>
+        <div id="contact-info">
+           <p id="emailid"><i id="email-icon" class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;hiwalerhushikesh27@gmail.com</p>
+           <p id="phone"><i id="phone-icon" class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;+91 7057265829</p>
+           <a target="_blank" href="http://www.linkedin.com/in/%20rhushikesh-dev"><i id="linkedin-icon" class="fa-brands fa-linkedin"></i></a>
+           <i id="instagram-icon" class="fa-brands fa-instagram"></i>
+           <i id="github-icon" class="fa-brands fa-github"></i>
+           <a href="/data/Rhushikesh-Hiwale-7057265829.pdf" download><button id="cv-download-button">Download CV</button> </a>
+        </div>
+
+        <div id="line"></div>
+
+        <div id="contact-container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h3>Get In Touch</h3>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="email" id="email" placeholder="Enter your email id" required>
+                <textarea id="textarea" cols="4" placeholder="Enter your message" required></textarea>
+                <button id="submit-button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+           Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "hiwalerhushikesh27@gmail.com",
+                 Password : "CBBF3306C7072DC4DAC36CFFB5718B10266A",
+                 To : 'hiwalerhushikesh27@gmail.com',
+                 From : "hiwalerhushikesh27@gmail.com",
+                 Subject : "New Enquiry",
+                 Body : "Name : " + document.getElementById("name").value
+                        + "<br> Email : " + document.getElementById("email").value
+                        + "<br> Message : " + document.getElementById("textarea").value
+             }).then(
+                  message => alert("Message sent successfully")
+                );
+        } 
+    </script>
+</body>
+</html>
